@@ -1,11 +1,11 @@
-// sequelize Post model
+// sequelize Car model
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-// extends the sequelize model to the Post model
+// extends the sequelize model to the Car model
 class Car extends Model {}
 
-// build up data structure for post data
+// build up data structure for Car data
 Car.init(
   {
     // set id rule
