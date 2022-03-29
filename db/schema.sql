@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS gasapp_db;
+
+CREATE DATABASE gasapp_db;
