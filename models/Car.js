@@ -15,6 +15,10 @@ Car.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    Make: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
     Model: {
       type: DataTypes.STRING,
       allowNull: false,
