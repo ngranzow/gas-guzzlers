@@ -18,7 +18,7 @@ Car.init(
     Make: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
     Model: {
       type: DataTypes.STRING,
       allowNull: false,
