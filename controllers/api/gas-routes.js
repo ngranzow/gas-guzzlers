@@ -16,7 +16,7 @@ router.post('/', withAuth, (req, res) => {
 
   Gas.create({
     gas_price: req.body.gas_price,
-    user_id: req.session.user_id,
+    user_id: req.session.user_id || req.body.user_id,
     car_id: req.body.car_id
   })
     .then(dbGasData => res.json(dbGasData))
