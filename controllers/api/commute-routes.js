@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   Commute.create({
-    commute_distance: req.body.commute_distance,
-    user_id: req.session.user_id,
-    car_id: req.body.car_id
+    commute_distance: req.session.commute_distance || req.body.commute_distance,
+    user_id: req.session.user_id || req.body.user_id,
+    car_id: req.session.car_id || req.body.car_id
   })
     .then(dbCommuteData => res.json(dbCommuteData))
     .catch(err => {
