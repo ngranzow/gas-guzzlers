@@ -18,6 +18,7 @@ router.post('/', (req, res) => {
     Model: req.body.Model,
     Year: req.body.Year,
     MPG: req.body.MPG,
+    user_id: req.session.user_id || req.body.user_id
   })
     .then(dbCarData => res.json(dbCarData))
     .catch(err => {

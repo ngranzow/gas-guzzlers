@@ -12,14 +12,15 @@ Gas.init(
       autoIncrement: true
     },
     gas_price: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(4, 2),
       allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id'
+        key: 'id',
+        unique: false
       }
     },
     car_id: {
