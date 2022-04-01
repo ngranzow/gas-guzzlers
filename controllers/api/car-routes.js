@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Car } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //router GET
 router.get('/', (req, res) => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 //router POST
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Car.create({
     Make: req.session.Make || req.body.Make,
     Model: req.session.Model || req.body.Model,
@@ -28,7 +29,7 @@ router.post('/', (req, res) => {
 });
 
 //router DELETE
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   Car.destroy({
     where: {
       id: req.params.id
