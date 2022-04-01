@@ -14,12 +14,12 @@ Car.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-User.belongsToMany(Car, {
-  through: Gas,
-  as: 'gas_cars',
+User.hasMany(Gas, {
+  foreignKey: 'user_id'
+});
 
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
+Car.hasMany(Gas, {
+  foreignKey: 'car_id'
 });
 
 Gas.belongsTo(User, {
@@ -30,14 +30,6 @@ Gas.belongsTo(User, {
 Gas.belongsTo(Car, {
   foreignKey: 'car_id',
   onDelete: 'SET NULL'
-});
-
-User.hasMany(Gas, {
-  foreignKey: 'user_id'
-});
-
-Car.hasMany(Gas, {
-  foreignKey: 'car_id'
 });
 
 Commute.belongsTo(User, {
