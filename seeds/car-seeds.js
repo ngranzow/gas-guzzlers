@@ -36,4 +36,8 @@ const cardata = [
         MPG: 15,
         user_id: 5
     },
-]
+];
+
+const seedCars = () => Car.bulkCreate(commutedata);
+
+module.exports = seedCars;
