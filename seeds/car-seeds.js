@@ -38,6 +38,6 @@ const cardata = [
     },
 ];
 
-const seedCars = () => Car.bulkCreate(commutedata);
+const seedCars = () => Car.bulkCreate(cardata);
 
 module.exports = seedCars;
