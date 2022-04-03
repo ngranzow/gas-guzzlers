@@ -52,9 +52,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     User.create({
-        username: req.session.username || req.body.username,
-        email: req.session.email || req.body.email,
-        password: req.session.password || req.body.password
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
     })
     .then(dbUserData => {
         req.session.user_id = dbUserData.id;
