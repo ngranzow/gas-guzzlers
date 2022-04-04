@@ -9,8 +9,8 @@
         {{#each cars as |car|}}
         <li>
             {{> car-info car}}
-            <a href="/dashboard/commute/{{car.id}}" class="commute-link">Add commute</a>
-            <a href="/dashboard/gas/{{car.id}}" class="gas-link">Add gas</a>
+            <a href="/commute/" class="commute-link">Add commute</a>
+            <a href="/gas/" class="gas-link">Add gas</a>
         </li>
         {{/each}}
     </ol>
