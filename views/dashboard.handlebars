@@ -9,8 +9,8 @@
         {{#each cars as |car|}}
         <li>
             {{> car-info car}}
-            <a href="/commute/" class="commute-link">Add commute</a>
-            <a href="/gas/" class="gas-link">Add gas</a>
+            <a href="/dashboard/commute/" class="commute-link">Add commute</a>
+            <a href="/dashboard/gas/" class="gas-link">Add gas</a>
         </li>
         {{/each}}
     </ol>
@@ -33,10 +33,12 @@
             <input type="number" id="car-year" name="car-year" />
         </div>
         <div>
-            <label for="car-mpg">Model:</label>
-            <input type="mpg" id="car-mpg" name="car-mpg" />
+            <label for="car-mpg">MPG:</label>
+            <input type="number" id="car-mpg" name="car-mpg" />
         </div>
-        <button type="submit" class="btn">Add Car</button>
+        <div>
+            <button type="submit">Add Car</button>
+        </div>
     </form>
 </section>
 

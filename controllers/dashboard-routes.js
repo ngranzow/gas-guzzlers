@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { User, Car, Commute, Gas } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -49,10 +48,10 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/car/:id', withAuth, (req, res) => {
     Car.findOne({
         where: {
-            user_id: req.session.user_id
+            id: req.params.id
         },
         attributes: [
             'id',
@@ -65,19 +64,11 @@ router.get('/edit/:id', withAuth, (req, res) => {
         include: [
             {
                 model: Commute,
-                attributes: ['id', 'commute_distance', 'user_id', 'car_id', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
+                attributes: ['id', 'commute_distance', 'user_id', 'car_id', 'created_at']
             },
             {
                 model: Gas,
-                attributes: ['id', 'gas_price', 'user_id', 'car_id', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
+                attributes: ['id', 'gas_price', 'user_id', 'car_id', 'created_at']
             },
             {
                 model: User,
@@ -86,16 +77,47 @@ router.get('/edit/:id', withAuth, (req, res) => {
         ]
     })
     .then(dbCarData => {
-        if (dbCarData) {
-            const car = dbCarData.get({ plain: true });
-          
-            res.render('edit-car', {
-                car,
-                loggedIn: true
-            });
-        } else {
-            res.status(404).end();
+        if (!dbCarData) {
+            res.status(404).json({ message: 'No car found with this id' });
+            return;
         }
+
+        const car = dbCarData.map(car => car.get({ plain: true }));
+        console.log(car);
+        // const commutes = car.map(car => car.commutes);
+        // const gas = gas.map(car => car.gas);
+
+        res.render('single-car', { car, loggedIn: true });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.get('/commute/', withAuth, (req, res) => {
+    Commute.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        attributes: [
+            'id',
+            'commute_distance',
+            'user_id',
+            'car_id',
+            'created_at'
+        ],
+        include: [
+            {
+                model: Car,
+                attributes: ['id', 'Make', 'Model', 'Year']
+            }
+        ]
+    })
+    .then(dbCommuteData => {
+        const commutes = dbCommuteData.map(commute => commute.get({ plain: true }));
+        const cars = commutes.map(commute => commute.car);
+        res.render('commute', { cars, commutes, loggedIn: true });
     })
     .catch(err => {
         res.status(500).json(err);

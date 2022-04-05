@@ -1,19 +1,18 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const make = document.querySelector('input[name="car-make"]').value;
-  const model = document.querySelector('input[name="car-model"]').value;
-  const year = document.querySelector('input[name="car-year"]').value;
-  const mpg = document.querySelector('input[name="car-mpg"]').value;
-
-
-  const response = await fetch(`/api/cars`, {
-    method: 'CAR',
+  const Make = document.querySelector('input[name="car-make"]').value.trim();
+  const Model = document.querySelector('input[name="car-model"]').value.trim();
+  const Year = document.querySelector('input[name="car-year"]').value.trim();
+  const MPG = document.querySelector('input[name="car-mpg"]').value.trim();
+  
+  const response = await fetch(`/api/car`, {
+    method: 'POST',
     body: JSON.stringify({
-      make,
-      model,
-      year,
-      mpg
+      Make,
+      Model,
+      Year,
+      MPG
     }),
     headers: {
       'Content-Type': 'application/json'

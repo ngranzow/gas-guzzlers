@@ -1,12 +1,30 @@
 <section>
-    <h2>Add New Commute</h2>
+    <h2>Add A New Commute</h2>
     <form class="new-commute-form">
         <div>
             <label for="commute">Commute:</label>
             <input type="number" id="commute" name="commute" />
         </div>
+        {{#each cars}}
+        <div>
+            <p id="{{id}}">This is for your {{Make}} {{Model}} {{Year}}</p>
+        </div>
+        {{/each}}
         <button type="submit" class="btn">Add Commute</button>
     </form>
 </section>
+
+{{#if commutes.length}}
+<section>
+    <h3>Your Commutes</h3>
+    <ol>
+        {{#each commutes as |commute|}}
+        <li>
+            {{> commute-info commute}}
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
 
 <script src="/javascript/add-commute.js"></script>

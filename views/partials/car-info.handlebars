@@ -1,11 +1,11 @@
 <div class="cars">
     <div class="car">
-        <a href="/cars{{id}}" class="car-link">{{make}} {{model}} {{year}}</a>
+        <a href="/dashboard/car/{{id}}" class="car-link">{{Make}} {{Model}} {{Year}}</a>
     </div>
     <div class="commute">
-        <a href="/dashboard/commute/{{car.id}}" class="commute-link">This car has {{commute.length}} {{format_plural "commute" commute.length}}</a>
+        <a href="/commute/" class="commute-link">This car has {{commutes.length}} {{format_plural "commute" commutes.length}}</a>
     </div>
     <div class="gas">
-        <a href="/dashboard/gas/{{car.id}}" class="gas-link">This car has {{gas.length}} gas {{format_plural "price" gas.length}}</a>
+        <a href="/gas/" class="gas-link">This car has {{gas.length}} gas {{format_plural "price" gas.length}}</a>
     </div>
 </div>

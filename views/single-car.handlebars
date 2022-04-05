@@ -1,0 +1,31 @@
+<section>
+    <h2>{{car.Make}} {{car.Model}} {{car.Year}}</h2>
+    {{#if commutes.length}}
+    <div>
+        <h3>Car's Commutes</h3>
+        <ol>
+            {{#each commutes as |commute|}}
+            <li>
+                {{> commute-info commute}}
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    {{/if}}
+
+    {{#if gas.length}}
+    <div>
+        <h2>Car's Gas Prices</h2>
+        <ol>
+            {{#each gas}}
+            <li>
+                {{> gas-info gas}}
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    {{/if}}
+
+    <a href="/dashboard/commute/" class="commute-link">Add commute</a>
+    <a href="/dashboard/gas/" class="gas-link">Add gas</a>
+</section>
