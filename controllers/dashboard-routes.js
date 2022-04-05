@@ -82,12 +82,11 @@ router.get('/car/:id', withAuth, (req, res) => {
             return;
         }
 
-        const car = dbCarData.map(car => car.get({ plain: true }));
-        console.log(car);
-        // const commutes = car.map(car => car.commutes);
-        // const gas = gas.map(car => car.gas);
+        const car = dbCarData.get({ plain: true });
+        const commutes = car.commutes;
+        const gas = car.gas;
 
-        res.render('single-car', { car, loggedIn: true });
+        res.render('single-car', { commutes, gas, car, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
