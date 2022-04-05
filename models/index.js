@@ -18,27 +18,8 @@ User.hasMany(Gas, {
   foreignKey: 'user_id'
 });
 
-Car.hasMany(Gas, {
-  foreignKey: 'car_id'
-});
-
 Gas.belongsTo(User, {
   foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-Gas.belongsTo(Car, {
-  foreignKey: 'car_id',
-  onDelete: 'SET NULL'
-});
-
-Commute.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-Commute.belongsTo(Car, {
-  foreignKey: 'car_id',
   onDelete: 'SET NULL'
 });
 
@@ -47,8 +28,27 @@ User.hasMany(Commute, {
   onDelete: 'SET NULL'
 });
 
+Commute.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+
+Car.hasMany(Gas, {
+  foreignKey: 'car_id'
+});
+
+Gas.belongsTo(Car, {
+  foreignKey: 'car_id',
+  onDelete: 'SET NULL'
+});
+
 Car.hasMany(Commute, {
   foreignKey: 'car_id'
+});
+
+Commute.belongsTo(Car, {
+  foreignKey: 'car_id',
+  onDelete: 'SET NULL'
 });
 
 module.exports = { User, Car, Gas, Commute };
