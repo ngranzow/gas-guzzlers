@@ -1,0 +1,43 @@
+<section>
+    {{chart}}
+</section>
+
+{{#if cars.length}}
+<section>
+    <h2>Your Cars</h2>
+    <ol>
+        {{#each cars as |car|}}
+        <li>
+            {{> car-info car}}
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<section>
+    <h2>Add New Car</h2>
+    <form class="new-car-form">
+        <div>
+            <label for="car-make">Make:</label>
+            <input type="text" id="car-make" name="car-make" />
+        </div>
+        <div>
+            <label for="car-model">Model:</label>
+            <input type="text" id="car-model" name="car-model" />
+        </div>
+        <div>
+            <label for="car-year">Year:</label>
+            <input type="number" id="car-year" name="car-year" />
+        </div>
+        <div>
+            <label for="car-mpg">MPG:</label>
+            <input type="number" id="car-mpg" name="car-mpg" />
+        </div>
+        <div>
+            <button type="submit">Add Car</button>
+        </div>
+    </form>
+</section>
+
+<script src="/javascript/add-car.js"></script>
