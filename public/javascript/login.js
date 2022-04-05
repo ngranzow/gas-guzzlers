@@ -1,3 +1,5 @@
+Command: toastr["success"]("Welcome to our Site!", "Welcome")
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -15,6 +17,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+
       document.location.replace('/dashboard/');
     } else {
       alert(response.statusText);
@@ -41,12 +44,17 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
+ 
+      // console.log("hello");
       document.location.replace('/dashboard/');
+  
     } else {
       alert(response.statusText);
     }
   }
 }
+
+
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
