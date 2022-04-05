@@ -1,14 +1,15 @@
 async function commuteFormHandler(event) {
     event.preventDefault();
 
-    const commute_text = document.querySelector('input[name="commute"]').value.trim();
+    const commute_distance = document.querySelector('input[name="commute"]').value.trim();
     const car_id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1]
+        window.location.toString().split('/').length - 1
+      ];
 
-    const response = await fetch(`/api/car`, {
+    const response = await fetch(`/api/commute`, {
         method: 'POST',
         body: JSON.stringify({
-          commute_text,
+          commute_distance,
           car_id
         }),
         headers: {
@@ -23,4 +24,4 @@ async function commuteFormHandler(event) {
       }
 }
 
-document.querySelector('.commute-form').addEventListener('submit', commuteFormHandler);
+document.querySelector('.new-commute-form').addEventListener('submit', commuteFormHandler);
