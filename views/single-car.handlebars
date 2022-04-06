@@ -1,6 +1,10 @@
 <section>
     <h2>{{car.Make}} {{car.Model}} {{car.Year}}</h2>
     <section>
+
+        {{!-- image commute icon--}}
+        <img src="/images/commute 1.png" alt="commute icon" id="commute-icon">
+
         <h2>Add A New Commute</h2>
         <form class="new-commute-form">
             <div>
@@ -11,6 +15,10 @@
         </form>
     </section>
     <section>
+
+    {{!-- image gas icon--}}
+    <img src="/images/gas black.png" alt="gas pump icon" id="gas-icon">
+
     <h2>Add New Gas Entry</h2>
     <form class="new-gas-form">
         <div>
@@ -23,6 +31,9 @@
 
     {{#if commutes.length}}
     <div>
+        {{!-- image commute list icon--}}
+        <img src="/images/commute 2.png" alt="commute list icon" id="commute-list-icon">
+
         <h2>Car's Commutes</h2>
         <ol>
             {{#each commutes as |commute|}}
@@ -36,6 +47,9 @@
 
     {{#if gas.length}}
     <div>
+        {{!-- image gas list icon--}}
+        <img src="/images/gas full empty.png" alt="gas list icon" id="gas-list-icon">
+        
         <h2>Car's Gas Prices</h2>
         <ol>
             {{#each gas}}
