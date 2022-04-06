@@ -21,6 +21,7 @@ header {
     padding: 20px;
     padding-top: 0px;
     color: var(--secondary-color);
+    font-size: 110%;
   }
 a {
   text-decoration: none;
@@ -85,7 +86,7 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -105,10 +106,10 @@ header h1 {
 
 main {
   /* flex: 1; */
-  padding: 2% 4%;
+  padding: 10% 35%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .btn-no-style {
@@ -175,7 +176,6 @@ main {
 } */
 
 footer {
-  
   display: flex;
   justify-content: center;
   padding: 1%;
