@@ -1,10 +1,21 @@
 const router = require('express').Router();
-const { Car } = require('../../models');
+const { Car, Gas, Commute } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //router GET
 router.get('/', (req, res) => {
-  Car.findAll()
+  Car.findAll({
+    include: [
+      {
+          model: Commute,
+          attributes: ['commute_distance', 'created_at']
+      },
+      {
+          model: Gas,
+          attributes: ['gas_price', 'created_at']
+      }
+  ]
+  })
     .then(dbCarData => res.json(dbCarData))
     .catch(err => {
       console.log(err);
