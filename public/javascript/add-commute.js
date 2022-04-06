@@ -16,7 +16,7 @@ async function commuteFormHandler(event) {
           'Content-Type': 'application/json'
         }
       });
-    
+
       if (response.ok) {
         document.location.reload();
       } else {
