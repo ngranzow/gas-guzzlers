@@ -47,12 +47,14 @@ async function getCarData() {
 
     for (var i = 0; i < commutes.length; i++) {
         const commute = commutes[i].map( (i) => i.commute_distance);
-        commuteData.push(commute);
+        const lastCommute = commute[commute.length - 1];
+        commuteData.push(lastCommute);
     }
 
     for (var i = 0; i < gas.length; i++) {
         const gasPrice = gas[i].map( (i) => i.gas_price);
-        gasPriceData.push(gasPrice);
+        const lastGas = gasPrice[gasPrice.length - 1];
+        gasPriceData.push(lastGas);
     }
 }
 
