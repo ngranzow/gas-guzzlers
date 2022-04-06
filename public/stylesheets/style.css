@@ -87,10 +87,10 @@ form label {
   width: 100%;
   min-height: 100%;
   /* max-width: 1200px; */
-  margin: 0 auto;
+  /* margin: 0 auto;
   display: flex;
   flex-direction: column;
-} */
+} */ 
 
 /* header {
   border-bottom: 1px solid #ccc;
@@ -106,9 +106,9 @@ header h1 {
 
 main {
   /* flex: 1; */
-  padding: 10% 35%;
+  padding: 2em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -132,7 +132,7 @@ main {
 
 .homeChartContainer {
   height: 200em;
-  width: 200em;
+  width: 100%;
 }
 
 
@@ -187,3 +187,9 @@ footer {
   font-size: 110%;
 }
 
+.dashboard {
+  display:flex;
+  padding: 2em 20em;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
