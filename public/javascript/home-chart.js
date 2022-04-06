@@ -11,7 +11,7 @@ async function homeChart() {
             label: 'Commutes',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: gasPriceData,
+            data: commuteData,
         },
         {
             label: 'Gas Prices',
@@ -28,7 +28,7 @@ async function homeChart() {
         options: {}
     };
     
-    let homeChart = new Chart(
+    new Chart(
         document.getElementById('homeChart'),
         config
     );
@@ -42,6 +42,11 @@ async function getCarData() {
     const commutes = barChartData.map( (x) => x.commutes);
     const gas = barChartData.map( (x) => x.gas);
 
+    for (var i = 0; i < usernames.length; i++) {
+        const username = usernames[i];
+        userData.push(username);
+    }
+
     for (var i = 0; i < commutes.length; i++) {
         const commute = commutes[i].map( (i) => i.commute_distance);
         commuteData.push(commute);
@@ -52,7 +57,7 @@ async function getCarData() {
         gasPriceData.push(gasPrice);
     }
 
-    userData.push(usernames);
+    // userData.push(usernames);
 }
 
 homeChart(homeChart);

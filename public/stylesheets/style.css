@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 :root {
-    --primary-color: black; 
+    --primary-color: black;
      --secondary-color: #829399;
     --tertiary-color: #D0F4EA;
-    --fourth-color: #E8FCC2; 
+    --fourth-color: #E8FCC2;
     --fifth-color: #B1CC74;
-    
+
   }
 body, html {
   height: 100%;
@@ -83,14 +83,14 @@ form label {
   display: block;
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   min-height: 100%;
   /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* header {
   border-bottom: 1px solid #ccc;
@@ -128,6 +128,11 @@ main {
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
+}
+
+.homeChartContainer {
+  height: 200em;
+  width: 200em;
 }
 
 
@@ -181,3 +186,4 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
