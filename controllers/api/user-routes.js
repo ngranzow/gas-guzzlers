@@ -3,7 +3,17 @@ const { User, Car, Commute, Gas } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        attributes: { exclude: ['id', 'email', 'password'] },
+        include: [
+            {
+                model: Commute,
+                attributes: ['commute_distance', 'created_at']
+            },
+            {
+                model: Gas,
+                attributes: ['gas_price', 'created_at']
+            }
+        ]
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
