@@ -2,12 +2,12 @@
   box-sizing: border-box;
 }
 :root {
-    --primary-color: black; 
+    --primary-color: black;
      --secondary-color: #829399;
     --tertiary-color: #D0F4EA;
-    --fourth-color: #E8FCC2; 
+    --fourth-color: #E8FCC2;
     --fifth-color: #B1CC74;
-    
+
   }
 body, html {
   height: 100%;
@@ -21,6 +21,7 @@ header {
     padding: 20px;
     padding-top: 0px;
     color: var(--secondary-color);
+    font-size: 110%;
   }
 a {
   text-decoration: none;
@@ -82,14 +83,14 @@ form label {
   display: block;
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+} */ 
 
 /* header {
   border-bottom: 1px solid #ccc;
@@ -105,10 +106,10 @@ header h1 {
 
 main {
   /* flex: 1; */
-  padding: 2% 4%;
+  padding: 2em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .btn-no-style {
@@ -127,6 +128,11 @@ main {
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
+}
+
+.homeChartContainer {
+  height: 200em;
+  width: 100%;
 }
 
 
@@ -175,9 +181,15 @@ main {
 } */
 
 footer {
-  
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+.dashboard {
+  display:flex;
+  padding: 2em 20em;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
