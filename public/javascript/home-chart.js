@@ -3,11 +3,12 @@ let userData = [], commuteData = [], gasPriceData = [];
 console.log(userData, commuteData, gasPriceData);
 
 async function homeChart() {
-    await getCarData();
+    await getUserData();
 
     let data = {
         labels: userData,
         datasets: [{
+            axis: 'y',
             label: 'Commutes',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
@@ -25,7 +26,9 @@ async function homeChart() {
     let config = {
         type: 'bar',
         data: data,
-        options: {}
+        options: {
+            indexAxis: 'y',
+        }
     };
     
     new Chart(
@@ -34,7 +37,7 @@ async function homeChart() {
     );
 }
 
-async function getCarData() {
+async function getUserData() {
     const response = await fetch(`/api/users`);
     const barChartData = await response.json();
 
@@ -56,8 +59,6 @@ async function getCarData() {
         const gasPrice = gas[i].map( (i) => i.gas_price);
         gasPriceData.push(gasPrice);
     }
-
-    // userData.push(usernames);
 }
 
-homeChart(homeChart);
+homeChart();
