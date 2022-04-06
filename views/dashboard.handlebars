@@ -1,9 +1,15 @@
+<div class = "dashboard">
 <section>
     {{chart}}
 </section>
 
 {{#if cars.length}}
 <section>
+
+    {{!-- image car icon--}}
+
+    <img src="/images/commute log.png" width="100rem" height="100rem" alt="car list icon" id="car-list-icon">
+
     <h2>Your Cars</h2>
     <ol>
         {{#each cars as |car|}}
@@ -16,6 +22,10 @@
 {{/if}}
 
 <section>
+
+    {{!-- image new car icon--}}
+    <img src="/images/car 2.png" width="100" height="100" alt="car icon" id="car-icon">
+
     <h2>Add New Car</h2>
     <form class="new-car-form">
         <div>
@@ -40,4 +50,9 @@
     </form>
 </section>
 
+<canvas id="dashChart" width="400" height="400"></canvas>
+</div>
+
 <script src="/javascript/add-car.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/javascript/dash-chart.js"></script>

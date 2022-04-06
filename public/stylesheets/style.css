@@ -1,39 +1,57 @@
 * {
   box-sizing: border-box;
 }
+:root {
+    --primary-color: black;
+     --secondary-color: #829399;
+    --tertiary-color: #D0F4EA;
+    --fourth-color: #E8FCC2;
+    --fifth-color: #B1CC74;
 
+  }
 body, html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
-  color: #333;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--primary-color);
 }
-
+header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: var(--secondary-color);
+    font-size: 110%;
+  }
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: var(--primary-color);
   font-weight: bold;
   transition: color .1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: var(--teritary-color);
 }
 
 button {
-  background-color: #225ca3;
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color .1s;
-  cursor: pointer;
-  border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: var(--tertiary-color);
+    display: inline-block;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    /* padding: 14px 34px; */
+    text-align: center;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: var(--fifth-color);
 }
 
 .car-list {
@@ -65,30 +83,33 @@ form label {
   display: block;
 }
 
-.wrapper {
+/* .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+} */ 
 
-header {
+/* header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
-}
+} */
 
 header h1 {
   font-size: 1em;
 }
 
 main {
-  flex: 1;
-  padding: 2% 4%;
+  /* flex: 1; */
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .btn-no-style {
@@ -107,6 +128,11 @@ main {
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
+}
+
+.homeChartContainer {
+  height: 200em;
+  width: 100%;
 }
 
 
@@ -155,9 +181,15 @@ main {
 } */
 
 footer {
-  border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+.dashboard {
+  display:flex;
+  padding: 2em 20em;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

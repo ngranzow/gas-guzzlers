@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Commute Logger</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+
 </head>
 
 <body>
   <div class="wrapper">
     
     <header>
+      {{!-- image logo--}}
+      <img src="/images/Logo.png"  alt="commuter logger logo" id="header-logo">
 
       <h1>
         <a href="/">Commute Logger</a>
@@ -19,16 +23,17 @@
 
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
 
     </header>
     
     <main>
+
       {{{ body }}}
     </main>
     
@@ -40,7 +45,13 @@
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  {{!-- <script src="toastr.js"></script> --}}
+ 
   {{/if}}
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
 </body>
 
 </html>

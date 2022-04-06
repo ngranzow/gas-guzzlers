@@ -3,7 +3,17 @@ const { User, Car, Commute, Gas } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
+        attributes: { exclude: ['id', 'email', 'password'] },
+        include: [
+            {
+                model: Commute,
+                attributes: ['commute_distance', 'created_at']
+            },
+            {
+                model: Gas,
+                attributes: ['gas_price', 'created_at']
+            }
+        ]
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -91,7 +101,7 @@ router.post('/login', (req, res) => {
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
-            req.session.loggedIn - true;
+            req.session.loggedIn = true;
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
@@ -99,6 +109,9 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+console.log("in user-routes")
+console.log(req.session)
+
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
