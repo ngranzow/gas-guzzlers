@@ -189,8 +189,8 @@ footer {
 
 .dashboard {
   display:flex;
-  padding: 2em 20em;
-  flex-direction: column;
+  padding: 2em 16em;
+  flex-direction: column-reverse;
   justify-content: space-evenly;
 }
 
