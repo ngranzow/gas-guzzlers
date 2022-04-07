@@ -15,33 +15,44 @@ no installation need, please visit https://mysterious-plateau-73573.herokuapp.co
 
 ## Usage
 When you visit our page first time,
-please click on login to register a acc  <br>
-![Screen Shot 2022-04-05 at 7 12 05 PM](https://user-images.githubusercontent.com/42502061/161881939-5059a646-9a15-438d-97d3-13242ca763bd.png)  <br>
+You will see the homepage this below, along with a chart that show the previous data  <br>
+ <img width="965" alt="Screen Shot 2022-04-06 at 8 33 54 PM" src="https://user-images.githubusercontent.com/42502061/162114965-35c03188-8e63-4b59-9e17-6682480a6265.png">
+ <br>
 
 If you already have a account,
-you may login via here  <br>
-![Screen Shot 2022-04-05 at 7 16 34 PM](https://user-images.githubusercontent.com/42502061/161882376-a5327b4c-2fb8-4d5e-ab4a-6f45968a1f51.png)  <br>
+you may login via here , or, you may signup one <br>
+<img width="257" alt="Screen Shot 2022-04-06 at 8 39 38 PM" src="https://user-images.githubusercontent.com/42502061/162115581-080e1d4a-cac7-4c04-9f07-934d1462bb3a.png">
+ <br>
 
-If you do not, please click signup via here  <br>
-![Screen Shot 2022-04-05 at 7 17 19 PM](https://user-images.githubusercontent.com/42502061/161882447-cd294f6e-9370-4659-aec8-6527c9143fa6.png)  <br>
+ <img width="562" alt="Screen Shot 2022-04-06 at 8 40 18 PM" src="https://user-images.githubusercontent.com/42502061/162115629-1dcd089f-09db-43cf-a237-d23c83ce0028.png">
+ <br>
 
-Next you may start adding car for your acc,
-you will need to input the make , model, year, and MPG of the car  <br>
-![Screen Shot 2022-04-05 at 7 18 17 PM](https://user-images.githubusercontent.com/42502061/161882561-2a20f0a4-932f-46fc-b4b3-1cb610083950.png)  <br>
+
+
+Next you may start adding car for your acc, to do that you will need to click on the Dashboard
+
+ <img width="271" alt="Screen Shot 2022-04-06 at 8 37 54 PM" src="https://user-images.githubusercontent.com/42502061/162115417-ad98611d-d98e-4364-8f5c-ca7e7002bf57.png">
+
+
+And then, you will need to input the make , model, year, and MPG of the car  <br>
+<img width="259" alt="Screen Shot 2022-04-06 at 8 37 30 PM" src="https://user-images.githubusercontent.com/42502061/162115344-86d81e46-4a6d-4f54-a1ba-910908f76ac5.png"> <br>
 
 
 After the car is added, you will see it on the dashboard  <br>
-![Screen Shot 2022-04-05 at 7 20 24 PM](https://user-images.githubusercontent.com/42502061/161882776-4f13d4d0-3ab5-4215-813b-8972c7f9a194.png)  <br>
+<img width="301" alt="Screen Shot 2022-04-06 at 8 41 48 PM" src="https://user-images.githubusercontent.com/42502061/162115777-123bcdb1-f6c1-4a6a-ab5b-d60f9cd46272.png"> <br>
 
 By click on the car,
 you will able to add commute and Gas price  <br>
-![Screen Shot 2022-04-05 at 7 21 03 PM](https://user-images.githubusercontent.com/42502061/161882842-cc9cc179-ef4c-4e78-a81b-38ce15af6e97.png)  <br>
+<img width="280" alt="Screen Shot 2022-04-06 at 8 42 14 PM" src="https://user-images.githubusercontent.com/42502061/162115817-941ca0fb-7d48-4fc9-b2da-41b0d78d30f5.png"> <br>
 
 
 once the car has added commute and gas price,
 it will show under the car profile  <br>
-![Screen Shot 2022-04-05 at 7 21 55 PM](https://user-images.githubusercontent.com/42502061/161882948-6a37ddc3-45d9-4ccc-966f-d7757e996a9f.png)  <br>
+<img width="351" alt="Screen Shot 2022-04-06 at 8 42 51 PM" src="https://user-images.githubusercontent.com/42502061/162115886-229c19aa-fbbf-4756-9d10-b77b978484fe.png">  <br>
 
+
+after that, your data will upload on the chart! <br>
+<img width="978" alt="Screen Shot 2022-04-06 at 8 43 40 PM" src="https://user-images.githubusercontent.com/42502061/162116004-ae0afd6e-f0e1-44a4-8590-273e29716188.png">  <br>
 
 ## Contributing
 [Nate Granzow](https://github.com/ngranzow)  <br>
