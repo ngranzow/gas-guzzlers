@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Car, Gas, Commute } = require('../../models');
+const { Car, Gas, Commute, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //router GET
@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
       {
           model: Gas,
           attributes: ['gas_price', 'created_at']
+      },
+      {
+        model: User,
+        attributes: ['username']
       }
   ]
   })
