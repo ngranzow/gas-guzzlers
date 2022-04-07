@@ -1,5 +1,7 @@
 let carData = [], commuteData = [], gasPriceData = [], userData = [];
-console.log(userData);
+
+let userCar = [];
+console.log(userCar);
 
 async function dashChart() {
     await getCarData();
@@ -73,6 +75,9 @@ async function getCarData() {
         const lastGas = gasPrice[gasPrice.length - 1];
         gasPriceData.push(lastGas);
     }
+
+    const userCar = userData.map((userData, i) => `${userData}'s ${carData[i]}`)
+    return userCar;
 }
 
 dashChart();
