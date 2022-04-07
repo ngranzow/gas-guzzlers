@@ -131,7 +131,7 @@ main {
 }
 
 .homeChartContainer {
-  height: 200em;
+  height: 100%;
   width: 100%;
 }
 
@@ -191,5 +191,12 @@ footer {
   display:flex;
   padding: 2em 20em;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login-style {
+  display:flex;
+  padding: 2em 20em;
+  flex-direction: row;
   justify-content: space-evenly;
 }
