@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Commute } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//router GET - find all commutes
 router.get('/', (req, res) => {
   Commute.findAll()
     .then(dbCommuteData => res.json(dbCommuteData))
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//router POST - create and post specific commute
 router.post('/', withAuth, (req, res) => {
   Commute.create({
     commute_distance: req.body.commute_distance,

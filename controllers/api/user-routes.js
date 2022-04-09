@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Car, Commute, Gas } = require('../../models');
 
+//router GET all users
 router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['id', 'email', 'password'] },
@@ -22,6 +23,7 @@ router.get('/', (req, res) => {
         });
 });
 
+//router GET specific user
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -60,6 +62,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//router POST - create user
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
@@ -79,6 +82,7 @@ router.post('/', (req, res) => {
     });
 });
 
+//router POST - login as specific user
 router.post('/login', (req, res) => {
     console.log(req.body);
     User.findOne({
@@ -108,6 +112,7 @@ router.post('/login', (req, res) => {
     });
 });
 
+//router POST - log out as specific user
 router.post('/logout', (req, res) => {
 console.log("in user-routes")
 console.log(req.session)
@@ -121,6 +126,7 @@ console.log(req.session)
     }
 });
 
+//router PUT - verify user and update to what's been passed through
 router.put('/:id', (req, res) => {
     User.update(req.body, {
         individualHooks: true,
@@ -141,6 +147,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+//router DELETE
 router.delete('/:id', (req, res) => {
     User.destroy({
         where: {

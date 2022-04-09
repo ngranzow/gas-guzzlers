@@ -1,5 +1,7 @@
+//data array
 let userData = [], commuteData = [], gasPriceData = [];
 
+//create aand configure homeChart (Commutes & Gas Prices)
 async function homeChart() {
     await getUserData();
 
@@ -44,6 +46,7 @@ async function homeChart() {
     );
 }
 
+//fetch user data for homeChart
 async function getUserData() {
     const response = await fetch(`/api/users`);
     const barChartData = await response.json();

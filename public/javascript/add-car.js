@@ -1,3 +1,5 @@
+
+//FUNCTION - newFormHander adds new values in Car Model entered by user as constants
 async function newFormHandler(event) {
   event.preventDefault();
 
@@ -26,4 +28,5 @@ async function newFormHandler(event) {
   }
 }
 
+//new form 
 document.querySelector('.new-car-form').addEventListener('submit', newFormHandler);
