@@ -1,8 +1,11 @@
+// sequelize Gas model
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// extends the sequelize model to the Gas model
 class Gas extends Model {}
 
+//// build up data structure for Gas data
 Gas.init(
   {
     id: {
@@ -39,4 +42,5 @@ Gas.init(
   }
 );
 
+// Export this page
 module.exports = Gas;

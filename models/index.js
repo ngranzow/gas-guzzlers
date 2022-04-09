@@ -51,4 +51,5 @@ Commute.belongsTo(Car, {
   onDelete: 'SET NULL'
 });
 
+// Export this page
 module.exports = { User, Car, Gas, Commute };

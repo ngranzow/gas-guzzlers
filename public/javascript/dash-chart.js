@@ -1,8 +1,10 @@
+//data arrays
 let carData = [], commuteData = [], gasPriceData = [], userData = [];
 
 let userCar = [];
 console.log(userCar);
 
+//dashChart function - update configutration and create new chart
 async function dashChart() {
     await getCarData();
 
@@ -45,6 +47,7 @@ async function dashChart() {
     );
 }
 
+//fetch data for dashChart function
 async function getCarData() {
     const response = await fetch(`/api/car/`);
     const barChartData = await response.json();

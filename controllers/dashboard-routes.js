@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Car, Commute, Gas } = require('../models');
 const withAuth = require('../utils/auth');
 
+//router GET - all cars of user
 router.get('/', withAuth, (req, res) => {
     Car.findAll({
         where: {
@@ -48,6 +49,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+//router GET - specific car of user
 router.get('/car/:id', withAuth, (req, res) => {
     Car.findOne({
         where: {
@@ -94,6 +96,7 @@ router.get('/car/:id', withAuth, (req, res) => {
     });
 });
 
+//router GET - all commutes of user
 router.get('/commute/', withAuth, (req, res) => {
     Commute.findAll({
         where: {

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Car, Commute, Gas } = require('../models');
 
+//router GET - all cars from all users
 router.get('/', (req, res) => {
     console.log(req.session);
 
@@ -49,6 +50,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//router GET  - user log in 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -58,6 +60,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//router GET - specific car and its commute and gas data
 router.get('/post/:id', (req, res) => {
     Car.findOne({
         where: {

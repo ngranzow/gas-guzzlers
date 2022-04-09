@@ -1,5 +1,7 @@
+//toastr - welcom to site pop up
 Command: toastr["success"]("Welcome to our Site!", "Welcome")
 
+//loginFormHandler function - user login via email & password
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -25,6 +27,7 @@ async function loginFormHandler(event) {
   }
 }
 
+//signupFormHandler function - user sign up via username, email, & password
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -55,7 +58,6 @@ async function signupFormHandler(event) {
 }
 
 
-
+//event listeners
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
