@@ -58,7 +58,11 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+.car-styles {
+  display:flex;
+  justify-content: space-evenly;
 
+}
 textarea, input {
   padding: .5%;
   border-radius: 5px;
@@ -167,9 +171,9 @@ main {
   margin-bottom: 1%;
 }
 
-.commute:nth-child(odd) {
+/* .commute:nth-child(odd) {
   background-color: #fff5eb;
-}
+} */
 
 .commute .meta {
   font-size: 90%;
@@ -192,8 +196,10 @@ main {
 footer {
   display: flex;
   justify-content: center;
-  padding: 1%;
+  padding: 5%;
   font-size: 110%;
+  /* border-top: 1px dashed var(--secondary-color); */
+
 }
 
 .dashboard {
