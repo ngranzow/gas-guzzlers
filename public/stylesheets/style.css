@@ -104,12 +104,16 @@ header h1 {
   font-size: 1em;
 }
 
+
+
 main {
   /* flex: 1; */
-  padding: 2em;
+  padding: 0em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
+
 }
 
 .btn-no-style {
@@ -132,7 +136,8 @@ main {
 
 .homeChartContainer {
   height: 100%;
-  width: 100%;
+  width: 90%;
+  padding-left: 2em;
 }
 
 
