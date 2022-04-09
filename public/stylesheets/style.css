@@ -1,3 +1,4 @@
+//* General Styles*/
 * {
   box-sizing: border-box;
 }
@@ -9,6 +10,8 @@
     --fifth-color: #B1CC74;
 
   }
+
+/* Primary section styles*/
 body, html {
   height: 100%;
   padding: 0;
@@ -23,6 +26,7 @@ header {
     color: var(--secondary-color);
     font-size: 110%;
   }
+
 a {
   text-decoration: none;
   color: var(--primary-color);
@@ -34,6 +38,7 @@ a:hover {
   color: var(--teritary-color);
 }
 
+/*button styles*/
 button {
     border: none;
     background-color: var(--secondary-color);
@@ -54,6 +59,7 @@ button:hover {
   background-color: var(--fifth-color);
 }
 
+/*car styles*/
 .car-list {
   margin: 0;
   padding: 0;
@@ -63,6 +69,8 @@ button:hover {
   justify-content: space-evenly;
 
 }
+
+/*textarea and form styles*/
 textarea, input {
   padding: .5%;
   border-radius: 5px;

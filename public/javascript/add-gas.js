@@ -1,4 +1,5 @@
-async function commuteFormHandler(event) {
+//FUNCTION - gasFormHander adds new values in Gas Model entered by user as constants
+async function gasFormHandler(event) {
     event.preventDefault();
 
     const gas_price = document.querySelector('input[name="gas-price"]').value.trim();
@@ -24,4 +25,4 @@ async function commuteFormHandler(event) {
     }
 }
 
-document.querySelector('.new-gas-form').addEventListener('submit', commuteFormHandler);
+document.querySelector('.new-gas-form').addEventListener('submit', gasFormHandler);

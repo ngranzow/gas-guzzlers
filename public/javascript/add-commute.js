@@ -1,3 +1,4 @@
+//FUNCTION - commuteFormHander adds new values in Commute Model entered by user as constants
 async function commuteFormHandler(event) {
     event.preventDefault();
 

@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- title--}}
   <title>Commute Logger</title>
+
+  {{!-- stylesheet links--}}
   <link rel="stylesheet" href="/stylesheets/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
 
@@ -13,6 +16,7 @@
 <body>
   <div class="wrapper">
     
+    {{!-- HEADER--}}
     <header>
       {{!-- image logo--}}
       <img src="/images/Logo.png"  alt="commuter logger logo" id="header-logo">
@@ -21,6 +25,7 @@
         <a href="/">Commute Logger</a>
       </h1>
 
+      {{!-- NAVIGATION - Login / Logout / Dasahboard--}}
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">Dashboard</a>
@@ -37,17 +42,20 @@
       {{{ body }}}
     </main>
     
+    {{!-- footer--}}
     <footer>
       Have a safe drive!
     </footer>
 
   </div>
   
+  {{!-- if logged in--}}
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{!-- <script src="toastr.js"></script> --}}
  
   {{/if}}
+  {{!-- js scripts--}}
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>

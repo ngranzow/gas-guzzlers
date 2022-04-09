@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { Gas } = require('../../models');
-
 const withAuth = require('../../utils/auth');
 
+//router GET - find all gas listed
 router.get('/', (req, res) => {
   Gas.findAll()
     .then(dbGasData => res.json(dbGasData))
@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//router POST - post specific gas entry
 router.post('/', withAuth, (req, res) => {
 
   Gas.create({
@@ -26,6 +27,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
+//router DELETE 
 router.delete('/:id', withAuth, (req, res) => {
   Gas.destroy({
     where: {

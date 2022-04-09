@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Car, Gas, Commute, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//router GET
+//router GET - find all cars
 router.get('/', (req, res) => {
   Car.findAll({
     include: [
@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//router POST
+//router POST - list specific car created
 router.post('/', withAuth, (req, res) => {
   Car.create({
     Make: req.body.Make,
@@ -43,7 +43,7 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-//router DELETE
+//router DELETE 
 router.delete('/:id', withAuth, (req, res) => {
   Car.destroy({
     where: {
