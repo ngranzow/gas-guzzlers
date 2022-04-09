@@ -1,6 +1,7 @@
-* {
+/* * {
   box-sizing: border-box;
 }
+
 :root {
     --primary-color: black;
      --secondary-color: #829399;
@@ -8,22 +9,24 @@
     --fourth-color: #E8FCC2;
     --fifth-color: #B1CC74;
 
-  }
-body, html {
+  } */
+
+/* body, html {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: var(--primary-color);
-}
-header {
+} */
+
+/* header {
     text-align: center;
     padding: 20px;
     padding-top: 0px;
     color: var(--secondary-color);
     font-size: 110%;
-  }
-a {
+  } */
+/* a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
@@ -32,9 +35,9 @@ a {
 
 a:hover {
   color: var(--teritary-color);
-}
+} */
 
-button {
+/* button {
     border: none;
     background-color: var(--secondary-color);
     border-radius: 25px;
@@ -45,16 +48,24 @@ button {
     font-size: 16px;
     line-height: 22px;
     margin: 16px 16px 16px 20px;
-    /* padding: 14px 34px; */
+    padding: 14px 34px;
     text-align: center;
     cursor: pointer;
-}
+} */
 
-button:hover {
+/* button:hover {
   background-color: var(--fifth-color);
+} */
+
+.navbar {
+  background-color: white;
 }
 
-.car-list {
+.company-logo {
+  height: 60px;
+}
+
+/* .car-list {
   margin: 0;
   padding: 0;
 }
@@ -81,7 +92,7 @@ form > div {
 
 form label {
   display: block;
-}
+} */
 
 /* .wrapper {
   width: 100%;
@@ -100,19 +111,19 @@ form label {
   padding: 0 1%;
 } */
 
-header h1 {
+/* header h1 {
   font-size: 1em;
-}
+} */
 
-main {
-  /* flex: 1; */
+/* main {
+  flex: 1;
   padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
+} */
 
-.btn-no-style {
+/* .btn-no-style {
   background: none;
   border: none;
   padding: 0;
@@ -139,7 +150,7 @@ main {
 .car {
   margin-bottom: 2%;
   line-height: 150%;
-}
+} */
 
 /* .car .title span {
   font-style: italic;
@@ -147,7 +158,7 @@ main {
   color: #7d7d7d;
 } */
 
-.edit-link {
+/* .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
 }
@@ -174,13 +185,13 @@ main {
 
 .new-car-form input {
   width: 300px;
-}
+} */
 
 /* .edit-car-form {
   margin-bottom: 5%;
 } */
 
-.car-info-link {
+/* .car-info-link {
   font-weight: lighter;
 }
 
@@ -203,4 +214,4 @@ footer {
   padding: 2em 20em;
   flex-direction: row;
   justify-content: space-evenly;
-}
+} */

@@ -70,19 +70,4 @@ async function getUserData() {
     }
 }
 
-// async function sortData() {
-//     await getUserData();
-
-//     let merged = commuteData.map((commute, i) => {
-//         return { "commute": commuteData[i], "user": userData[i], "gasprice": gasPriceData[i] }
-//     });
-    
-//     const dataSort = merged.sort(function(a, b) {
-//         return a.datapoint - b.datapoint
-//     });
-
-//     console.log(dataSort);
-// }
-
 homeChart();
-// sortData();
