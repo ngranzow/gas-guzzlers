@@ -12,14 +12,14 @@ async function dashChart() {
         labels: carData,
         datasets: [{
             label: 'Commutes',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(32, 156, 238)',
+            borderColor: 'rgb(32, 156, 238)',
             data: commuteData,
         },
         {
             label: 'Gas Prices',
-            backgroundColor: 'rgb(155, 99, 132)',
-            borderColor: 'rgb(155, 99, 132)',
+            backgroundColor: 'rgb(23, 66, 135)',
+            borderColor: 'rgb(23, 66, 135)',
             data: gasPriceData,
         }
     ]

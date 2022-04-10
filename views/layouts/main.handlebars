@@ -8,57 +8,55 @@
   <title>Commute Logger</title>
 
   {{!-- stylesheet links--}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/stylesheets/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
 
 </head>
 
 <body>
   <div class="wrapper">
-    
     {{!-- HEADER--}}
     <header>
-      {{!-- image logo--}}
-      <img src="/images/Logo.png"  alt="commuter logger logo" id="header-logo">
-
-      <h1>
-        <a href="/">Commute Logger</a>
-      </h1>
-
-      {{!-- NAVIGATION - Login / Logout / Dasahboard--}}
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+      <nav class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          {{!-- image logo--}}
+          <a class="navbar-item" href="/"><i class="fa-solid fa-car-side"></i> |Commute Logger</i></a>
+        </div>
+        {{!-- NAVIGATION - Home / Login / Logout / Dasahboard--}}
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/">Home</a>
+            {{#if loggedIn}}
+            <a class="navbar-item" href="/dashboard">Dashboard</a>
+            <a class="navbar-item" href="/logout">Logout</a>
+            {{else}}
+            <a class="navbar-item" href="/login">Login</a>
+            {{/if}}
+          </div>
+        </div>
       </nav>
-
     </header>
-    
-    <main>
 
+    <main class="section">
       {{{ body }}}
     </main>
-    
+
     {{!-- footer--}}
-    <footer>
+    <footer class="section is-fixed-bottom">
       Have a safe drive!
     </footer>
 
   </div>
-  
+
   {{!-- if logged in--}}
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  {{!-- <script src="toastr.js"></script> --}}
- 
   {{/if}}
   {{!-- js scripts--}}
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
 </body>
 
