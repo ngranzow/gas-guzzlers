@@ -30,7 +30,7 @@
             <a class="navbar-item" href="/">Home</a>
             {{#if loggedIn}}
             <a class="navbar-item" href="/dashboard">Dashboard</a>
-            <a class="navbar-item" href="/logout">Logout</a>
+            <a class="navbar-item" id="logout">Logout</a>
             {{else}}
             <a class="navbar-item" href="/login">Login</a>
             {{/if}}
@@ -44,8 +44,8 @@
     </main>
 
     {{!-- footer--}}
-    <footer class="section is-fixed-bottom">
-      Have a safe drive!
+    <footer class="has-text-centered">
+      <p>Have a safe drive!</p>
     </footer>
 
   </div>

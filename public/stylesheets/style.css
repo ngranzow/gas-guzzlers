@@ -202,12 +202,12 @@ main {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
+  /* display: flex; */
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* padding: 5%; */
   font-size: 110%;
   /* border-top: 1px dashed var(--secondary-color); */
-
 }
 
 .dashboard {
